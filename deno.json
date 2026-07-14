@@ -8,5 +8,7 @@
     "@std/path": "jsr:@std/path@^1.0.0",
     "@std/fs": "jsr:@std/fs@^1.0.0",
     "sharp": "npm:sharp@^0.33.5"
-  }
+  },
+  "nodeModulesDir": "auto",
+  "allowScripts": ["npm:sharp@0.33.5"]
 }
