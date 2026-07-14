@@ -1,0 +1,12 @@
+{
+  "name": "@steno/plugin-image",
+  "version": "1.0.0",
+  "exports": "./mod.ts",
+  "imports": {
+    "steno": "jsr:@steno/steno@^0.6.0",
+    "@std/assert": "jsr:@std/assert@^1.0.0",
+    "@std/path": "jsr:@std/path@^1.0.0",
+    "@std/fs": "jsr:@std/fs@^1.0.0",
+    "sharp": "npm:sharp@^0.33.5"
+  }
+}
