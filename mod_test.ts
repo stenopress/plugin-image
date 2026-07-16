@@ -10,11 +10,11 @@ async function createTestPng(): Promise<Uint8Array> {
       width: 1,
       height: 1,
       channels: 4,
-      background: { r: 0, g: 0, b: 0, alpha: 0 }
-    }
+      background: { r: 0, g: 0, b: 0, alpha: 0 },
+    },
   })
-      .png()
-      .toBuffer();
+    .png()
+    .toBuffer();
 }
 
 Deno.test({
@@ -30,7 +30,7 @@ Deno.test({
       widths: [1],
       formats: ["webp"],
       quality: 70,
-      injectLazyLoad: false // Disable HTML scanning for this pure asset generation test
+      injectLazyLoad: false, // Disable HTML scanning for this pure asset generation test
     });
 
     // deno-lint-ignore no-explicit-any
@@ -47,11 +47,12 @@ Deno.test({
     } finally {
       await Deno.remove(testDir, { recursive: true });
     }
-  }
+  },
 });
 
 Deno.test({
-  name: "image-plugin: injects lazy-load, dimension, and LQIP attributes into HTML files",
+  name:
+    "image-plugin: injects lazy-load, dimension, and LQIP attributes into HTML files",
   fn: async () => {
     const testDir = await Deno.makeTempDir({ prefix: "steno_html_test_" });
 
@@ -76,7 +77,7 @@ Deno.test({
     const plugin = imagePlugin({
       widths: [1],
       formats: ["webp"],
-      injectLazyLoad: true
+      injectLazyLoad: true,
     });
 
     // deno-lint-ignore no-explicit-any
@@ -97,10 +98,16 @@ Deno.test({
       assertStringIncludes(processedHtml, 'loading="lazy"');
 
       // Assert that the inline Base64 LQIP transition style is present
-      assertStringIncludes(processedHtml, 'style="background-image: url(\'data:image/png;base64,');
-      assertStringIncludes(processedHtml, "onload=\"this.style.filter='none'\"");
+      assertStringIncludes(
+        processedHtml,
+        "style=\"background-image: url('data:image/png;base64,",
+      );
+      assertStringIncludes(
+        processedHtml,
+        "onload=\"this.style.filter='none'\"",
+      );
     } finally {
       await Deno.remove(testDir, { recursive: true });
     }
-  }
+  },
 });
