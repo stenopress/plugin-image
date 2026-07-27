@@ -11,8 +11,8 @@
     "jsr:@std/path@^1.1.5": "1.1.6",
     "jsr:@std/toml@1.0.11": "1.0.11",
     "jsr:@std/yaml@1.1.2": "1.1.2",
-    "jsr:@steno/steno@0.6": "0.6.0",
-    "npm:marked@latest": "18.0.6",
+    "jsr:@steno/steno@0.9": "0.9.0",
+    "npm:marked@18.0.7": "18.0.7",
     "npm:sharp@~0.33.5": "0.33.5"
   },
   "jsr": {
@@ -50,8 +50,8 @@
     "@std/yaml@1.1.2": {
       "integrity": "de612653c036749ba2044165e316f52412b0f0698afffb7ee80b5331d6d2abae"
     },
-    "@steno/steno@0.6.0": {
-      "integrity": "bcdb5a37e19f87b08514a70ae61a945a6521bce1d9ba9544c0e2684ee1ff9410",
+    "@steno/steno@0.9.0": {
+      "integrity": "ecbc351949b7edddd6fde720894fa2c83d0b72f6dd3b95ec569af8612eb54014",
       "dependencies": [
         "jsr:@std/path@1.1.6",
         "jsr:@std/toml",
@@ -217,8 +217,8 @@
     "is-arrayish@0.3.4": {
       "integrity": "sha512-m6UrgzFVUYawGBh1dUsWR5M2Clqic9RVXC/9f8ceNlv2IcO9j9J/z8UoCLPqtsPBFNzEpfR3xftohbfqDx8EQA=="
     },
-    "marked@18.0.6": {
-      "integrity": "sha512-MrV5puXBfuiy6wl6DLaq3BtIJQAJToAd5zt/ZKhRfGRAuFPALE7/4Y7jnxRQoEgK/pBgurGqLyAuRgZ2xOjr6w==",
+    "marked@18.0.7": {
+      "integrity": "sha512-iDVQ5ldaiKXn6b2JroX5kgRfmwgqolW7NpaEzTl1k/2Zh1njIEN9yniyLV/mOvWwtsE8OGgkjsCYvijuPk1dtA==",
       "bin": true
     },
     "semver@7.7.3": {
@@ -270,7 +270,7 @@
       "jsr:@std/assert@1",
       "jsr:@std/fs@1",
       "jsr:@std/path@1",
-      "jsr:@steno/steno@0.6",
+      "jsr:@steno/steno@0.9",
       "npm:sharp@~0.33.5"
     ]
   }
