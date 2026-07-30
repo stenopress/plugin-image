@@ -1,22 +1,24 @@
 /**
  * Steno plugin for bulk image optimization, resizing, and automatic HTML lazy-loading injection.
  */
-import type { StenoPlugin } from "steno";
+import type { SiteConfig, StenoPlugin } from "steno";
 import { basename, dirname, extname, join } from "@std/path";
 import { walk } from "@std/fs";
 import sharp from "sharp";
 
+/** Options for generated image variants and HTML image enhancement. */
 export interface ImagePluginOptions {
+  /** Target widths generated for images large enough to support them. */
   widths?: number[];
+  /** Output formats generated at each target width. */
   formats?: Array<"webp" | "jpeg" | "png">;
+  /** Encoder quality from 1 to 100. */
   quality?: number;
-  injectLazyLoad?: boolean; // New Option!
+  /** Whether to add dimensions, lazy loading, and an LQIP to local images. */
+  injectLazyLoad?: boolean;
 }
 
-export interface SiteConfig {
-  output?: string;
-}
-
+/** Creates a Steno plugin that optimizes images in the generated site. */
 export default function imagePlugin(
   options: ImagePluginOptions = {},
 ): StenoPlugin {
