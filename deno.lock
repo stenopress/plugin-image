@@ -11,7 +11,7 @@
     "jsr:@std/path@^1.1.5": "1.1.6",
     "jsr:@std/toml@1.0.11": "1.0.11",
     "jsr:@std/yaml@1.1.2": "1.1.2",
-    "jsr:@steno/steno@0.9": "0.9.0",
+    "jsr:@steno/steno@0.10": "0.10.0",
     "npm:marked@18.0.7": "18.0.7",
     "npm:sharp@~0.35.3": "0.35.3"
   },
@@ -50,8 +50,8 @@
     "@std/yaml@1.1.2": {
       "integrity": "de612653c036749ba2044165e316f52412b0f0698afffb7ee80b5331d6d2abae"
     },
-    "@steno/steno@0.9.0": {
-      "integrity": "ecbc351949b7edddd6fde720894fa2c83d0b72f6dd3b95ec569af8612eb54014",
+    "@steno/steno@0.10.0": {
+      "integrity": "00d66f962032676df874f0fcab256746cab9f86f4eb9d3e4b121af2826d109a5",
       "dependencies": [
         "jsr:@std/path@1.1.6",
         "jsr:@std/toml",
@@ -290,7 +290,7 @@
       "jsr:@std/assert@^1.0.19",
       "jsr:@std/fs@1",
       "jsr:@std/path@1",
-      "jsr:@steno/steno@0.9",
+      "jsr:@steno/steno@0.10",
       "npm:sharp@~0.35.3"
     ]
   }
